@@ -13,8 +13,15 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
-
+        let squareList = [];                // tableau des carrés
+        let square = 0;
+        for (let i = 1; i < 21; i++) {
+            if(i % 2 === 0) {               // choisi les nbrs pairs
+                square=Math.pow(i,2);       // calcule le carré de i
+                squareList.push(square);    // ajoute le carré au tableau
+            }
+        }
+        alert(squareList);
     });
 
 })();
