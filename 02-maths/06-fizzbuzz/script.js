@@ -11,6 +11,21 @@
 
 (function() {
 
-    // your code here
+    for (let i=1; i<=100; i++) {
+
+        if (Number.isInteger(i/15)) {
+            console.log(`${i} fizzbuzz`);
+        }
+        else if (Number.isInteger(i/3)) {
+            console.log(`${i} fizz`);
+        }
+        else if (Number.isInteger(i/5)) {
+            console.log(`${i} buzz`);
+        }
+        else {
+            console.log(i);
+        }
+    }
+
 
 })();
