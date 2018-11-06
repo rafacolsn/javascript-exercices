@@ -16,19 +16,12 @@
     document.getElementById("run").addEventListener("click", function() {
 
 
-        const input = document.getElementById("numbers").value;
-        let n = input.lenght;
-        const items = input.split(", ",n);
-        const list = Array.from(items);
-        const nbrList = list.map(Number);
-
-
-        console.log(list); // output: [1, 2, 3, 4, 5, 6]
-        console.log(list[0]); // output : 2
-        console.log(nbrList[3]); // output : 10
-        console.log(nbrList);
-
-
+        let input = document.getElementById("numbers").value;
+        let list = Array.from(input.split(", ",input.lenght));
+        let nbrList = list.map(Number);
+        alert(nbrList.sort(function (a,b){
+            return a - b;
+        }));
     });
 
 })();

@@ -10,13 +10,17 @@
 // You will have time to focus on it later.
 
 (function() {
-    
+
     // to get the value of an input: document.getElementById("element-id").value
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
-
+        let n = parseInt(document.getElementById("number").value);
+        let fact=1;
+        for (let i=1; i <= n; i++) {
+            fact*=i;
+        }
+        alert(`La factorielle de ${n}! est ${fact}`);
     });
 
 })();
