@@ -11,8 +11,16 @@
 
 (function() {
 
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+    let hello = ["Bonjour !","Bonsoir !"];
+    let hour = new Date(Date.now()).getHours();
+    let minute = new Date().getMinutes();
+    let time = `${hour}.${minute}`;
+    console.log(time);
+    if (time < 17.3) {
+        document.getElementById("target").innerHTML = hello[0];
 
-    // your code here
+    } else {
+        document.getElementById("target").innerHTML = hello[1];
+    }
 
 })();

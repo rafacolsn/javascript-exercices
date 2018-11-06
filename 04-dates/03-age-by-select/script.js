@@ -10,7 +10,13 @@
 // You will have time to focus on it later.
 
 (function() {
+    document.getElementById("run").addEventListener("click", () => {
+        let bday = document.getElementById("dob-day").value;
+        let bmonth = document.getElementById("dob-month").value;
+        let byear = document.getElementById("dob-year").value;
+        let birthday = new Date (byear,bmonth,bday);
+        console.log(birthday);
+        alert(Date.now - birthday);
 
-    // your code here
-
+    })
 })();
