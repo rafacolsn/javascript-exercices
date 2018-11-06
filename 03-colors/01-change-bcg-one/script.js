@@ -11,6 +11,17 @@
 
 (function() {
 
-    // your code here
+    document.querySelector("#red").addEventListener("click", () => {
+        document.querySelector("html").style.backgroundColor = "#501212";
+    } )
+    document.querySelector("#green").addEventListener("click", () => {
+        document.querySelector("html").style.backgroundColor = "#232e16";
+    } )
+    document.querySelector("#yellow").addEventListener("click", () => {
+        document.querySelector("html").style.backgroundColor = "#c5bb12";
+    } )
+    document.querySelector("#blue").addEventListener("click", () => {
+        document.querySelector("html").style.backgroundColor = "#031931";
+    } )
 
 })();
