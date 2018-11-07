@@ -24,6 +24,15 @@
         "cerise",
     ];
 
-    // your code here
+    alert(`Le tableau est d'abord :
+    ${fruits}`);
+    document.getElementById("run").addEventListener("click", () => {
+        fruits.pop();
+        fruits.shift();
+        fruits.unshift("banane");
+        fruits.push("kiwi");
+        alert(`Le tableau est maintenant :
+            ${fruits}`);
+    });
 
 })();

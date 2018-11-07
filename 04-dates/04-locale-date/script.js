@@ -11,8 +11,8 @@
 
 (function() {
 
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
-
-    // your code here
-
+    let date = new Date();
+    let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById("target").innerHTML =
+    `Nous sommes le ${date.toLocaleTimeString("fr-FR", options)}`;
 })();

@@ -11,6 +11,20 @@
 
 (function() {
 
-    // your code here
-
+    document.getElementById("run").addEventListener("click", () => {
+        let year = document.getElementById("year").value;
+        let myDate = new Date (year, 0, 1, 0, 0, 0, 0);
+        let monthsList = [];
+        for (var i = 0; i <= 11; i++) {
+            myDate.setMonth(i);
+            myDate.setDate(13);
+            let weekday = myDate.getDay();
+            if (weekday == 5) {
+                let month = myDate.toLocaleString("fr-FR", { month: "long" });
+                monthsList.push(` ${month}`);
+            }
+        }
+        alert(`Le(s) mois qui contien(nen)t un vendredi 13 est/sont :
+            ${monthsList}`);
+    });
 })();

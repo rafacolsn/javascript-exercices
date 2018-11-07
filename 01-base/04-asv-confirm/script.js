@@ -12,19 +12,16 @@
 (function() {
 
     function asv() {
-        let age = prompt ("Quel âge as-tu ?");
-        let sex = prompt ("Homme ou femme ?");
-        let town = prompt ("De quelle ville es-tu ?");
         if(confirm(
-        `Vous avez ${age} ans
-        Vous êtes un/e ${sex}
-        Vous habitez à ${town}`) == true) {
-            alert(`OK !`);
-        } else {
-            asv()
+            `Vous avez ${prompt ("Quel âge as-tu ?")} ans
+            Vous êtes un/e ${prompt ("Homme ou femme ?")}
+            Vous habitez à ${prompt ("De quelle ville es-tu ?")}`) == true)
+                {
+                alert(`OK !`);
         }
+        else {asv()}
     }
-    asv()
+    asv();
 
 
 

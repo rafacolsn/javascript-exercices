@@ -89,6 +89,13 @@
         },
     ];
 
-    // your code here
-
+    document.getElementById("run").addEventListener("click", () => {
+            var found = people.find(function (a) {
+                if (a.firstname === "Jean" && a.lastname === "Dupont") {
+                    return a.email;
+                } ;
+            })
+            console.log(found.email);
+            alert(people.indexOf(found));
+    });
 })();

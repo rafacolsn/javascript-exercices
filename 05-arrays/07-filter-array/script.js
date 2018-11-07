@@ -89,6 +89,11 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+            let filtredPeople = people.filter(function (a) {
+                return a.age > 18;
+            });
+            console.log(filtredPeople);
+    });
 
 })();

@@ -11,12 +11,13 @@
 
 (function() {
     document.getElementById("run").addEventListener("click", () => {
-        let bday = document.getElementById("dob-day").value;
-        let bmonth = document.getElementById("dob-month").value;
-        let byear = document.getElementById("dob-year").value;
-        let birthday = new Date (byear,bmonth,bday);
-        console.log(birthday);
-        alert(Date.now - birthday);
 
+        let birthday = new Date (
+            document.getElementById("dob-year").value,
+            document.getElementById("dob-month").value,
+            document.getElementById("dob-day").value
+            );
+        let today = new Date ();
+        alert(`Vous avez ${today.getFullYear() - birthday.getFullYear()} ans`);
     })
 })();

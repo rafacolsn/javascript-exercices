@@ -10,7 +10,22 @@
 // You will have time to focus on it later.
 
 (function() {
+    document.getElementById("run").addEventListener("click", () => {
+        let randomList = [];
+        let id = "n-";
+        for (var i = 0; i < 10; i++) {
+            let randomNumber = Math.floor(Math.random()*100);
+            randomList.push(randomNumber);
+            id += i+1;
 
-    // your code here
+
+        }
+        console.log(randomList);
+        console.log(id);
+
+
+
+    });
+
 
 })();
