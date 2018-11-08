@@ -24,7 +24,7 @@
         let n = document.getElementById("tr");
 
         n.appendChild(cell);
-        console.log(n);
+        console.log(n+1);
     }
 
 
