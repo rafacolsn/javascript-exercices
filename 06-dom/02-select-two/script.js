@@ -11,6 +11,8 @@
 
 (function() {
 
-    // your code here
+    document.getElementsByClassName('target')[0].innerHTML = "encore gagné : owned";
+    let className = document.getElementsByClassName('target');
+    console.log(className);
 
 })();

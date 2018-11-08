@@ -28,6 +28,14 @@
         "cerise",
     ];
 
-    // your code here
-
+    document.getElementById("run").addEventListener("click", () => {
+        let deduped = []; // nouveau tableau
+        for (let i = 0; i < fruits.length; i++) {
+            let fruit = fruits[i];
+            if (deduped.indexOf(fruit) === -1) {
+                deduped.push(fruits[i]);
+            }
+        }; // si indexOf === -1 => l'élément n'a pas d'index dans le tableau et est donc pas présent
+        console.log(deduped);
+    });
 })();

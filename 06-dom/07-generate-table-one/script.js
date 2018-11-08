@@ -11,6 +11,21 @@
 
 (function() {
 
-    // your code here
+    let target = document.getElementById("target");
+    let tableau = document.createElement("table");
+    let row = document.createElement("tr");
+    let cell = document.createElement("td");
+    target.appendChild(tableau);
+    tableau.appendChild(row);
+
+    for (var i = 0; i < 10 ; i++) {
+        row.appendChild(cell);
+        console.log(cell);
+        let n = document.getElementById("tr");
+
+        n.appendChild(cell);
+        console.log(n);
+    }
+
 
 })();

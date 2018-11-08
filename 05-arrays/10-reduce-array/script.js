@@ -88,7 +88,8 @@
             age: 81,
         },
     ];
+    let somme = people.reduce(function (x, y) {
+    return x + y.age;}, 0); // 0 valeur initiale nécessaire pour parcourir les objets du tableau
 
-    // your code here
-
+    console.log(somme);
 })();

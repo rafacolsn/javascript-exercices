@@ -11,6 +11,12 @@
 
 (function() {
 
-    // your code here
-
+    let section = document.getElementsByTagName("section");
+    console.log(section);
+    let source = document.getElementById("source");
+    let data = source.getAttribute("data-image");
+    let image = document.createElement("img");
+    image.src = data;
+    target.appendChild(image);
+    section[1].removeChild(source);
 })();

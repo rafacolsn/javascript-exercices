@@ -12,18 +12,20 @@
 (function() {
     document.getElementById("run").addEventListener("click", () => {
         let randomList = [];
-        let id = "n-";
-        for (var i = 0; i < 10; i++) {
-            let randomNumber = Math.floor(Math.random()*100);
+        for (let i = 0; i < 10; i++) {
+            let randomNumber = Math.floor(Math.random()*100); // choisi un nbr au hasard
             randomList.push(randomNumber);
-            id += i+1;
-
-
+            document.getElementById("n-"+(i+1)).innerHTML = randomList[i]; // l'ajoute au tableau
         }
-        console.log(randomList);
-        console.log(id);
 
+        let smaller = randomList.reduce(function(x,y) {return (x<y) ? x:y;} ); // renvoie le plus petit
+        let bigger = randomList.reduce(function(x,y) {return (x>y) ? x:y;} ); // renvoie le plus grand
+        let sum = randomList.reduce(function(x,y) {return (x+y);} ); // renvoie la somme
 
+        document.getElementById("min").innerHTML = smaller; // inscrit la réponse
+        document.getElementById("max").innerHTML = bigger; // inscrit la réponse
+        document.getElementById("sum").innerHTML = sum; // inscrit la somme
+        document.getElementById("average").innerHTML = (sum/randomList.length); // inscrit la moyenne
 
     });
 

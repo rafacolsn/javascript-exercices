@@ -11,6 +11,10 @@
 
 (function() {
 
-    // your code here
+    let className = document.getElementsByClassName('target');
+    for (var i = 0; i < className.length; i++) {
+        className[i].innerHTML = "à moi le pouvoir : owned";
+    }
+
 
 })();
