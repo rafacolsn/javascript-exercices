@@ -11,6 +11,14 @@
 
 (function() {
 
-    // your code here
+  document.getElementById("pass-one").onkeyup = function() {
+    let str = document.getElementById("pass-one").value;
+    document.getElementById("counter").innerHTML = `${str.length}/10`;
+    if (str.length > 10) {
+      console.log(str);
+    }
+
+
+  }
 
 })();
