@@ -11,6 +11,16 @@
 
 (function() {
 
-    // your code here
+  document.getElementById("run").addEventListener ("click", () => {
+    if (document.getElementById("pass-one").value === document.getElementById("pass-two").value) {
+      alert('ok');
+    }
+    else {
+      let inputs = Array.from(document.getElementsByTagName("input"));
+      inputs.forEach(function(item) {
+        item.setAttribute("class", "error");
+      });
+    };
+  });
 
 })();
