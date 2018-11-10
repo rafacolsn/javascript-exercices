@@ -12,20 +12,11 @@
 (function() {
 
     let target = document.getElementById("target");
-    let tableau = document.createElement("table");
-    let row = document.createElement("tr");
-    let cell = document.createElement("td");
-    target.appendChild(tableau);
-    tableau.appendChild(row);
-
-    for (var i = 0; i < 10 ; i++) {
-        row.appendChild(cell);
-        console.log(cell);
-        let n = document.getElementById("tr");
-
-        n.appendChild(cell);
-        console.log(n+1);
+    let tableGen = document.createElement("table");
+    target.appendChild(tableGen);
+    tableGen.setAttribute("id", "tableau");
+    let tableGet = document.getElementById("tableau");
+    for (var i = 0; i < 10; i++) {
+      let rowGen = tableGet.insertRow(i);
     }
-
-
 })();

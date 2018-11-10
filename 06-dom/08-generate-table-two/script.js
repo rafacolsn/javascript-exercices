@@ -11,6 +11,16 @@
 
 (function() {
 
-    // your code here
+  let target = document.getElementById("target");
+  let tableGen = document.createElement("table");
+  target.appendChild(tableGen);
+  tableGen.setAttribute("id", "tableau");
+  let tableGet = document.getElementById("tableau");
+  for (var i = 1; i <= 10; i++) {
+    let rowGen = tableGet.insertRow();
+      for (var j = 1; j <= 10; j++) {
+        rowGen.insertCell().textContent =i*j;
+      }
+  }
 
 })();
