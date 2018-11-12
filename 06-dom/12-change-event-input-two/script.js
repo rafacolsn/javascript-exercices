@@ -11,6 +11,13 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("pass-one").onkeyup = function() {
+        let str = document.getElementById("pass-one").value;
+        let num = /\d{1,}/g;
+        let numArr = str.match(num);
+        if (str.length >= 8 && numArr.length >= 2) {
+            document.getElementById("validity").innerHTML = "ok";
+      }
+    }
 
 })();
