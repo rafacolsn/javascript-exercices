@@ -11,6 +11,14 @@
 
 (function() {
 
-    // your code here
-
+    let i = 0;
+    let text = document.getElementById("target").innerHTML;
+    document.getElementById('target').innerHTML ="";
+    function typingMachine () {
+        if (i < text.length) {
+            document.getElementById('target').innerHTML += text.charAt(i);
+            i++;
+        }
+    }
+    setInterval(typingMachine, 100);
 })();

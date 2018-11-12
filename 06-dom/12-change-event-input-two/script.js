@@ -17,6 +17,8 @@
         let numArr = str.match(num);
         if (str.length >= 8 && numArr.length >= 2) {
             document.getElementById("validity").innerHTML = "ok";
+      } else {
+            document.getElementById("validity").innerHTML = "not ok";
       }
     }
 

@@ -13,6 +13,17 @@
 
     let date = new Date();
     let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+    function addZero(n) {
+        if (n < 10) {
+            n = "0" + n;
+        }
+        return n;
+    }
+
+    let hour = addZero(date.getHours());
+    let minute = addZero(date.getMinutes());
+
     document.getElementById("target").innerHTML =
-    `Nous sommes le ${date.toLocaleTimeString("fr-FR", options)}`;
+    `Nous sommes le ${date.toLocaleDateString("fr-FR", options)} à ${hour}h${minute}`;
 })();

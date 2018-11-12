@@ -10,7 +10,7 @@
 // You will have time to focus on it later.
 
 (function() {
-
-    // your code here
-
+    document.querySelector("#slider").addEventListener("input", () => {
+        document.querySelector("#target").innerHTML = "+"+document.querySelector("#slider").value;
+    })
 })();
