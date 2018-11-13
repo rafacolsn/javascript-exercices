@@ -11,6 +11,22 @@
 
 (function() {
 
-    // your code here
+    let partOne = document.querySelector("#part-one");
+    let partTwo = document.querySelector("#part-two");
+    let partThree = document.querySelector("#part-three");
+    let partFour = document.querySelector("#part-four");
+    partOne.setAttribute("type", "number");
+    partTwo.setAttribute("type", "number");
+    partThree.setAttribute("type", "number");
+    partFour.setAttribute("type", "number");
+    
+    for (i=1; i <= 39; i++) {
+        console.log(document.querySelector("#part-one"));
+        
+        
+    }
+    
+    
+
 
 })();
