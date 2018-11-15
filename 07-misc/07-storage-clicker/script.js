@@ -11,6 +11,13 @@
 
 (function() {
 
-    // your code here
+    let clicks = localStorage.increase;
+    document.querySelector("#target").innerHTML = Number(localStorage.increase);
+
+    document.querySelector("#increment").addEventListener("click", function() {
+        clicks++;
+        localStorage.increase = clicks;
+        document.querySelector("#target").innerHTML = Number(localStorage.increase);
+    })
 
 })();
