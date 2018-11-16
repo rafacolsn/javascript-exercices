@@ -59,6 +59,4 @@
         }
         document.querySelector("#target").innerHTML = "+"+one+two+three+four;
      });
-    
-
 })();
