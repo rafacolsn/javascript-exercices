@@ -9,7 +9,8 @@
             "request": "launch",
             "name": "Launch Chrome",
             "url": "http://localhost:8080",
-            "webRoot": "${workspaceFolder}"
+            "webRoot": "${workspaceFolder}",
+            "file": "${workspaceFolder}/07-misc/05-worst-ui-three/index.html"
         },
         {
             "type": "chrome",

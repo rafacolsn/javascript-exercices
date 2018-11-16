@@ -38,50 +38,36 @@
         ];
     
     let click = [0, 0, 0 ,0];
+
+    let firstValue = fieldSlotArr[0].value;;
+    let secondValue = fieldSlotArr[1].value;
+    let thirdValue = fieldSlotArr[2].value;
+    let fourthValue = fieldSlotArr[3].value;
     
-    document.querySelector("#fix-part-one").addEventListener("click", function() {
-        click[0]++;
-        if (click[0] % 2 != 0) {
-            clearInterval(slotId[0]);
-            document.querySelector("#target").innerHTML = "+" + fieldSlotArr[0].value + "00" + "00" + "00";
+    let valuesArr = [firstValue, secondValue, thirdValue, fourthValue];
+    
+    
+    function clickSlotLaunchNStop(i) {
+        click[i]++;
+        valuesArr[i] = fieldSlotArr[i].value;
+        
+        if (click[i] % 2 != 0) {
+            clearInterval(slotId[i]);
+            document.querySelector("#target").innerHTML = "+" + valuesArr[0] + valuesArr[1] + valuesArr[2] + valuesArr[3];
         } 
         else {
-            slotId[0] = setInterval(increaseSlot1, speed); // re-stock l'ID du nouvel interval
+            slotId[i] = setInterval(increaseSlot1, speed); // re-stock l'ID du nouvel interval
         }
-    });
+    }
     
-    document.querySelector("#fix-part-two").addEventListener("click", function() {
-        click[1]++;
-        if (click[1] % 2 != 0) {
-            clearInterval(slotId[1]);
-            document.querySelector("#target").innerHTML = "+" + fieldSlotArr[0].value + fieldSlotArr[1].value + "00" + "00";
-        } 
-        else {
-            slotId[1] = setInterval(function(){increaseSlot("#part-two")}, speed); // re-stock l'ID du nouvel interval
-        }
-    });
+    document.querySelector("#fix-part-one").addEventListener("click", function() {clickSlotLaunchNStop(0)});
     
-    document.querySelector("#fix-part-three").addEventListener("click", function() {
-        click[2]++;
-        if (click[2] % 2 != 0) {
-            clearInterval(slotId[2]);
-            document.querySelector("#target").innerHTML = "+" + fieldSlotArr[0].value + fieldSlotArr[1].value + fieldSlotArr[2].value + "00";
-        } 
-        else {
-            slotId[2] = setInterval(function(){increaseSlot("#part-three")}, speed); // re-stock l'ID du nouvel interval
-        }
-    });
+    document.querySelector("#fix-part-two").addEventListener("click", function() {clickSlotLaunchNStop(1)});
     
-    document.querySelector("#fix-part-four").addEventListener("click", function() {
-        click[3]++;
-        if (click[3] % 2 != 0) {
-            clearInterval(slotId[3]);
-            document.querySelector("#target").innerHTML = "+" + fieldSlotArr[0].value + fieldSlotArr[1].value + fieldSlotArr[2].value + fieldSlotArr[3].value;
-        } 
-        else {
-            slotId[3] = setInterval(function(){increaseSlot("#part-four")}, speed); // re-stock l'ID du nouvel interval
-        }
-    });
+    document.querySelector("#fix-part-three").addEventListener("click", function() {clickSlotLaunchNStop(2)});
+        
+    document.querySelector("#fix-part-four").addEventListener("click", function() {clickSlotLaunchNStop(3)});
+        
 })();
 
 
